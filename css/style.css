@@ -1,0 +1,443 @@
+/* ===== Reset start ====*/
+*{
+    box-sizing: border-box;
+}
+*:focus{
+    outline: none;
+}
+body{
+    margin:0;
+    background-color: #fff;
+    color: #777;
+    font: 300 15px/1 'Open-sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    font-weight: normal;
+}
+p{
+    margin: 0;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+a:hover, a:active{
+    text-decoration: none;
+}
+ul, ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+img{
+    max-width: 100%;
+}
+input,
+textarea,
+button{
+    outline: none;
+    border: none;
+}
+button{
+    border: none;
+    cursor: pointer;
+}
+textarea{
+    resize: vertical;
+}
+input[type="submit"] {
+    cursor: pointer;
+}
+blockquote{
+    margin: 0;
+}
+/* ===== Reset end =====*/
+/* ===== Default component start =====*/
+/* 
+    Buttons, text, title, section, small section, header, footer, form-elements, icons, tabs, blackquote, container 
+*/
+.default-section{
+    padding: 135px 0;
+    /* overflow: hidden; */
+}
+.default-section:nth-child(2){
+    padding-bottom: 0;
+}
+.small-section{
+    padding: 70px 0;
+}
+.container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: auto;
+}
+.container-fluid{
+    padding: 0 15px;
+}
+.title{
+    font-family: 'Dosis', sans-serif;
+    text-transform: uppercase;
+    color: #111;
+}
+.title.title-white{
+    color: #fff;
+}
+.title.section-title{
+    font-size: 18px;
+    letter-spacing: .5em;
+    margin-bottom: 75px;
+    font-weight: 400;
+}
+.title.section-title-light{
+    font-size: 18px;
+    letter-spacing: .3em;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+.default-text{
+    font-size: 15px;
+    line-height: 1.7333;
+    font-weight: 300;
+}
+blockquote, .blockquote{
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+blockquote span,
+.blockquote span{
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+.btn{
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+btn[disabled] {
+    cursor: not-allowed;
+    opacity: .6;
+}
+.btn.btn-default{
+    background-color: #e5e5e5;
+    color: #777;
+}
+.btn.btn-default:hover{
+    background-color: #d1d0d0;
+}
+.btn.btn-black{
+    background-color: #323232;
+    color: white;
+}
+.btn.btn-black:hover{
+    background-color: #000;
+}
+.btn.btn-xs{
+    padding: 7px 15px;
+    font-size:  11px;
+}
+.form-control{
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    height: 36px;
+    font-family: 'open-sans';
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 12px;
+    color: #777;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+.form-control:focus{
+    border-color: #111;
+}
+textarea.form-control{
+    min-height: 82px;
+    padding-top: 10px;
+}
+.form-control[disabled],
+.form-control.disabled {
+    cursor: not-allowed;
+    opacity: 6;
+}
+.form-control.error{
+    border-color: #f57e7e;
+}
+.form-info{
+    font-size: 11px;
+    font-weight: 400;
+    color: #aaa;
+}
+.form-info fa{
+    font-size: 12px;
+}
+/* ===== Default component end =====*/
+/* ===== Default classes start =====*/
+/*
+    text color, text-align, float, background  colors, text transform
+*/
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.text-justify{
+    text-align: justify;
+}
+
+.bg-black{
+    background-color: #111;
+}
+
+.bg-gray{
+    background-color: #f8f8f8;
+}
+/* ===== Default classes end =====*/
+/*===== Guide style start =====  */
+.guide-section form .form-control{
+    margin-bottom: 10px;
+}
+/*===== Guide style start =====*/
+
+/* ===== Custom style start =====*/
+.header {
+	padding: 25px 0;
+	overflow: hidden;
+	width: 100%;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+}
+.header .logo {
+    float: left;
+}
+.header .header-nav {
+	float: right;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+.header .header-nav li {
+	float: left;
+	line-height: 21px;
+	color: #d4d4d4;
+}
+.header .header-nav li+li {
+	margin-left: 35px;
+}
+.inner {
+	background: url('../img/inner-bg.jpg') no-repeat center / cover;
+	height: 100vh;
+    text-align: center;
+    padding-top: 73px;
+    color: rgba(246, 246, 246, .8);
+}
+.inner::before {
+	content: '';
+	display: inline-block;
+	height: 100%; 
+	vertical-align: middle;
+	margin-left: -4px;
+}
+.inner-content {
+	display:inline-block;
+	vertical-align: middle;
+}
+.inner h1 {
+	font-family: 'dosis', sans-serif;
+	font-size: 30px;
+	text-transform: uppercase;
+	color: #f5f5f5;
+	letter-spacing: 1.7em;
+	text-indent: 1.7em;
+}
+.inner span {
+	display: block;
+	color: #dbdbdb;
+	font-size: 19px;
+    padding-top: 82px;
+    color: rgba(246, 246, 246, .6);
+}
+/* ------ About studio start -----*/
+.team-wraper{
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 143px;
+}
+.team-item-info span{
+    display: block;
+}
+.team-item-name{
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: .4em;
+    margin-top: 30px;
+}
+.team-item-role{
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .4em;
+    margin-top: 15px;
+}
+.team-item .team-item-img{
+    position: relative;
+}
+.team-item .team-item-skills{
+    opacity: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    transition: all .2s linear;
+}
+.team-item .team-item-img:hover .team-item-skills{
+    opacity: 1;
+}
+.border-bottom{
+    border-bottom: 1px solid #ececec;
+}
+/* ------ About studio end -----*/
+
+/* ----- Services start-----*/
+#tabs .tabs-nav li{
+    float: left;
+    width: 20%;
+    text-align: center;
+    margin-bottom: 84px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .4em;
+    color: #888;
+}
+#tabs .tabs-nav span{
+    display: block;
+    margin-top: 37px;
+}
+#tabs .tabs-nav .icon{
+    font-size: 49px;
+}
+#tabs .tabs-nav .ui-state-active{
+    color: #111;
+}
+/* ----- Services end-----*/
+
+/* ----- Let's talk start-----*/
+.lets-talk-content{
+    padding: 140px 0;
+}
+.lets-talk-content p{
+    color: rgba(255, 255, 255, .7);
+    margin-bottom: 35px;;
+}
+.lets-talk .lets-talk-img{
+    margin-top: -32px;;
+}
+/* ----- Let's talk end-----*/
+
+/* ----- Portfolio start -----*/
+.portfolio .default-text p {
+    color: #777;
+    line-height: 26px;
+    max-width: 750px;
+    margin: auto;
+    padding-bottom: 88px;
+}
+#tabs-portfolio .tabs-portfolio-nav li{
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: .4em;
+    font-family: 'Dosis';
+    color: rgba(151, 151, 151, .5);
+    margin-bottom: 52px;
+}
+#tabs-portfolio .tabs-portfolio-nav li + li{
+    margin-left: 70px;
+}
+#tabs-portfolio .tabs-portfolio-nav .ui-state-active{
+    color: #111;
+}
+.portfolio-item{
+    float: left;
+    width: 33.333%;
+    padding: 0 4px;
+}
+.portfolio-item.grayscale{
+    filter: gray;
+    -webkit-filter: grayscale(100%);
+}
+.portfolio-item.grayscale:hover{
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+/* ----- /Portfolio end -----*/
+
+/* ------ why choose us start */
+.why-choose-us-punkts{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .4em;
+    margin: 35px 0 40px 0;
+}
+.default-section.why-choose-us .row + .row{
+    margin-top: 90px;
+}
+/* ------ why choose us end -----*/
+
+/* ------ Latest news start -----*/
+.latest-news .title a{
+    float: right;
+    font-family: 'Dosis';
+    font-size: 11px;
+    letter-spacing: .4em;
+    color: #999;
+}
+.col .latest-news-name{
+    font-size: 15px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: #777;
+    margin: 32px 0 18px 0;
+}
+.col .latest-news-name-data{
+    font-size: 11px;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 32px;
+}
+.col .latest-news-text{
+    font-size: 15px;
+    font-family: 'OpenSans light';
+    line-height: 26px;
+    color: #777;
+    margin-bottom: 30px;
+}
+.latest-news-img.grayscale{
+    filter: gray;
+    -webkit-filter: grayscale(100%);
+}
+.latest-news-img.grayscale:hover{
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+/* ------ Latest news end -----*/
+
+/* ------ Subscribe start -----*/
+.subscribe form .form-control{
+    max-width: 290px;
+}
+.subscribe .form-info {
+    margin-top: 17px;
+}
+/* ------ Subscribe end -----*/
+
+/* ===== Custom style end =====*/
