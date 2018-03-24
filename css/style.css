@@ -42,6 +42,7 @@ button{
 button{
     border: none;
     cursor: pointer;
+    padding: 0;
 }
 textarea{
     resize: vertical;
@@ -63,6 +64,9 @@ blockquote{
 }
 .default-section:nth-child(2){
     padding-bottom: 0;
+}
+.default-section:nth-child(6){
+    padding-bottom: 10px;
 }
 .small-section{
     padding: 70px 0;
@@ -176,8 +180,28 @@ textarea.form-control{
     font-weight: 400;
     color: #aaa;
 }
-.form-info fa{
+.form-info .fa{
     font-size: 12px;
+}
+.rhomb-icon{
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    text-align: center;
+    line-height: 23px;
+    border-radius: 2px;
+    font-size: 14px;
+    transform: rotate(45deg);
+}
+.rhomb-icon i{
+    transform: rotate(-45deg);
+}
+.rhomb-icon.black-icon{
+    color: #fff;
+    background-color: #111;
+}
+.rhomb-icon.transparent-icon{
+    border: 1px solid #000;
 }
 /* ===== Default component end =====*/
 /* ===== Default classes start =====*/
@@ -200,6 +224,11 @@ textarea.form-control{
 
 .bg-gray{
     background-color: #f8f8f8;
+}
+.m-auto{
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
 }
 /* ===== Default classes end =====*/
 /*===== Guide style start =====  */
@@ -344,6 +373,9 @@ textarea.form-control{
 /* ----- Let's talk end-----*/
 
 /* ----- Portfolio start -----*/
+.tabs-wrapper{
+    overflow: hidden;
+}
 .portfolio .default-text p {
     color: #777;
     line-height: 26px;
@@ -380,6 +412,17 @@ textarea.form-control{
 }
 /* ----- /Portfolio end -----*/
 
+/* ----- Like our-works satrt -----*/
+.default-section.like-our-works{
+    height: 220px;
+    padding-top: 73px;
+}
+.like-our-works span{
+    display: block;
+    margin-bottom: 28px;
+}
+/* ----- Like our-works end -----*/
+
 /* ------ why choose us start */
 .why-choose-us-punkts{
     font-size: 14px;
@@ -391,6 +434,100 @@ textarea.form-control{
     margin-top: 90px;
 }
 /* ------ why choose us end -----*/
+
+/* ------ Review courusel start -----*/
+.reviews-carousel{
+    padding: 135px 0;
+    overflow: hidden;
+}
+.slick-dots{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 30px;
+}
+.slick-dots li{
+    display:inline-block;
+    width: 9px;
+    height: 9px;
+    background-color: rgba(255, 255, 255, .8);
+    border: 1px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slick-dots li + li{
+    margin-left: 5px;
+}
+.slick-dots li.slick-active{
+    background-color: #000;
+    border-color: rgba(255, 255, 255, .8);
+}
+.slick-dots li button{
+    display : none;
+}
+.slick-arrow{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+    width: 90px;
+    cursor: pointer;
+}
+.slick-arrow.slick-prev{
+    left: 0;
+}
+.slick-arrow.slick-next{
+    right: 0;
+}
+.slick-arrow .carousel-button{
+    width: 63px;
+    height: 63px;
+    background: #fff;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    margin-left: -32px;
+    margin-top: -31px;
+}
+.slick-arrow.slick-next .carousel-button{
+    right: 0;
+    margin-right: -31px;
+}
+.slick-arrow .carousel-button .fa{
+    position: absolute;
+    transform: rotate(45deg);
+    font-size: 10px;
+}
+.slick-arrow.slick-prev .carousel-button .fa{
+    bottom: 14px;
+    right: 17px;
+}
+.slick-arrow.slick-next .carousel-button .fa{
+    top: 17px;
+    left: 14px;
+}
+.icon.icon-quote{
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+.slide-content p{
+    max-width: 675px;
+    margin: auto;
+    font-family: 'OpenSans Light';
+    font-size: 18px;
+    color: rgba(255, 255, 255, .75);
+    line-height: 30px;
+    padding: 20px 0;
+}
+.slide-content .review-author{
+    font-family: 'Open-sans Light';
+    font-size: 11px;
+    letter-spacing: .2em;
+    line-height: 38px;
+    color: rgba(255, 255, 255, .3);
+    text-transform: uppercase;
+}
+/* ------ Review courusel end -----*/
 
 /* ------ Latest news start -----*/
 .latest-news .title a{
@@ -439,5 +576,54 @@ textarea.form-control{
     margin-top: 17px;
 }
 /* ------ Subscribe end -----*/
+
+/* ------ Contacts start -----*/
+.contact-item .contact-item-content{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+.contact-item .contact-item-content span{
+    display: block;
+}
+.contact-item-content .contact-title{
+    font-family: 'Dosis';
+    font-size: 12px;
+    color: #777;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+.contact-item-content .contact-data{
+    font-size: 15px;
+    font-family: 'Dosis Regular';
+    color: #444;
+}
+/* ------ Contacts end -----*/
+
+/* ------ Footer start -----*/
+.footer{
+    background-color: #f8f8f8;
+    padding: 142px 0 62px 0;
+}
+.footer-nav li {
+    margin: 26px 15px;
+}
+.copyright .copy{
+    margin-top: 110px;
+    display: block;
+    font-family: 'Dosis';
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    color: #111;
+    margin-bottom: 17px;
+}
+.copyright .made-with-love{
+    font-family: 'Open-sans';
+    font-size: 11px;
+    color: #999;
+}
+/* ------ Footer end -----*/
 
 /* ===== Custom style end =====*/
