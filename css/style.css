@@ -179,6 +179,7 @@ textarea.form-control{
     font-size: 11px;
     font-weight: 400;
     color: #aaa;
+    font-family: 'OpenSans';
 }
 .form-info .fa{
     font-size: 12px;
@@ -200,8 +201,20 @@ textarea.form-control{
     color: #fff;
     background-color: #111;
 }
+.rhomb-icon.white-icon{
+    color:#111;
+    background-color: #f8f8f8;
+}
 .rhomb-icon.transparent-icon{
-    border: 1px solid #000;
+    border: 1px solid #777;
+}
+.arrow-up{
+    font-size: 50px;
+    color: #c6c6c6;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    cursor: pointer;
 }
 /* ===== Default component end =====*/
 /* ===== Default classes start =====*/
@@ -230,6 +243,12 @@ textarea.form-control{
     margin-left: auto;
     margin-right: auto;
 }
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
 /* ===== Default classes end =====*/
 /*===== Guide style start =====  */
 .guide-section form .form-control{
@@ -242,7 +261,7 @@ textarea.form-control{
 	padding: 25px 0;
 	overflow: hidden;
 	width: 100%;
-    position: fixed;
+    position: absolute;
     z-index: 99;
     top: 0;
 }
@@ -253,6 +272,9 @@ textarea.form-control{
 	float: right;
     font-size: 11px;
     text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: .3em;
+    color: rgba(255, 255, 255, .75);
 }
 .header .header-nav li {
 	float: left;
@@ -268,6 +290,7 @@ textarea.form-control{
     text-align: center;
     padding-top: 73px;
     color: rgba(246, 246, 246, .8);
+    position: relative;
 }
 .inner::before {
 	content: '';
@@ -278,13 +301,13 @@ textarea.form-control{
 }
 .inner-content {
 	display:inline-block;
-	vertical-align: middle;
+    vertical-align: middle;
 }
 .inner h1 {
 	font-family: 'dosis', sans-serif;
 	font-size: 30px;
 	text-transform: uppercase;
-	color: #f5f5f5;
+	color: rgba(254, 254, 254, .9);
 	letter-spacing: 1.7em;
 	text-indent: 1.7em;
 }
@@ -293,13 +316,23 @@ textarea.form-control{
 	color: #dbdbdb;
 	font-size: 19px;
     padding-top: 82px;
-    color: rgba(246, 246, 246, .6);
+    font-weight: 300;
+    color: rgba(254, 254, 254, .68);
+}
+.inner-icon{
+    position: absolute;
+    left: 50%;
+    bottom: 37px;
+}
+.inner-icon i{
+    margin: 7px;
+    color: #4e4e4e;
 }
 /* ------ About studio start -----*/
 .team-wraper{
     overflow: hidden;
     width: 100%;
-    padding-bottom: 143px;
+    padding: 107px 0 143px 0;
 }
 .team-item-info span{
     display: block;
@@ -309,9 +342,13 @@ textarea.form-control{
     text-transform: uppercase;
     letter-spacing: .4em;
     margin-top: 30px;
+    font-family: 'Dosis';
+    color: #777;
 }
 .team-item-role{
     font-size: 12px;
+    font-family: 'Dosis';
+    color: #777;
     text-transform: uppercase;
     letter-spacing: .4em;
     margin-top: 15px;
@@ -327,9 +364,64 @@ textarea.form-control{
     height: 100%;
     background-color: #000;
     transition: all .2s linear;
+    padding: 40px;
 }
 .team-item .team-item-img:hover .team-item-skills{
     opacity: 1;
+}
+.team-item-skills span{
+    font-size: 20px;
+    text-transform: uppercase;
+    color:#777;
+    letter-spacing: .3em;
+}
+.team-item-skills p{
+    line-height: 1.5;
+    margin: 25px 0 35px 0;
+}
+.skill-item span{
+    font-size: 11px;
+    color: #777;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    margin-bottom: 5px;
+}
+.progress-wrap{
+    width: 100%;
+    height: 12px;
+    background-color: rgba(255, 255, 255, .15);
+    margin-bottom: 20px;
+}
+.progress-wrap .progress{
+    background-color: rgba(255, 255, 255, .75);
+    height: 12px;
+    width: 0%;
+    transition: width .5s ease-out;
+}
+.progress-wrap .progress.branding{
+    transition: width .5s ease-out;
+}
+.progress-wrap .progress.design{
+    transition: width .5s ease-out .2s;
+}
+.progress-wrap .progress.development{
+    transition: width .5s ease-out .4s;
+}
+.progress-wrap .progress.photography{
+    transition: width .5s ease-out .6s;
+}
+.team-item .team-item-img:hover .branding{
+    width: 80%;
+}
+.team-item .team-item-img:hover .design{
+    width: 70%;
+}
+.team-item .team-item-img:hover .development{
+    width: 50%;
+}
+.team-item .team-item-img:hover .photography{
+    width: 90%;
 }
 .border-bottom{
     border-bottom: 1px solid #ececec;
@@ -390,6 +482,7 @@ textarea.form-control{
     font-family: 'Dosis';
     color: rgba(151, 151, 151, .5);
     margin-bottom: 52px;
+    font-size: 14px;
 }
 #tabs-portfolio .tabs-portfolio-nav li + li{
     margin-left: 70px;
@@ -413,10 +506,6 @@ textarea.form-control{
 /* ----- /Portfolio end -----*/
 
 /* ----- Like our-works satrt -----*/
-.default-section.like-our-works{
-    height: 220px;
-    padding-top: 73px;
-}
 .like-our-works span{
     display: block;
     margin-bottom: 28px;
@@ -513,14 +602,14 @@ textarea.form-control{
 .slide-content p{
     max-width: 675px;
     margin: auto;
-    font-family: 'OpenSans Light';
+    font-weight: 300;
     font-size: 18px;
     color: rgba(255, 255, 255, .75);
     line-height: 30px;
     padding: 20px 0;
 }
 .slide-content .review-author{
-    font-family: 'Open-sans Light';
+    font-weight: 300;
     font-size: 11px;
     letter-spacing: .2em;
     line-height: 38px;
@@ -539,6 +628,7 @@ textarea.form-control{
 }
 .col .latest-news-name{
     font-size: 15px;
+    font-family: 'Dosis';
     letter-spacing: .2em;
     text-transform: uppercase;
     color: #777;
@@ -546,6 +636,7 @@ textarea.form-control{
 }
 .col .latest-news-name-data{
     font-size: 11px;
+    font-family: 'Dosis';
     letter-spacing: .4em;
     text-transform: uppercase;
     color: #999;
@@ -553,7 +644,7 @@ textarea.form-control{
 }
 .col .latest-news-text{
     font-size: 15px;
-    font-family: 'OpenSans light';
+    font-weight: 300;
     line-height: 26px;
     color: #777;
     margin-bottom: 30px;
@@ -578,6 +669,9 @@ textarea.form-control{
 /* ------ Subscribe end -----*/
 
 /* ------ Contacts start -----*/
+.contact-item-wrapper{
+    margin-bottom: 80px;
+}
 .contact-item .contact-item-content{
     display: inline-block;
     vertical-align: middle;
@@ -587,17 +681,36 @@ textarea.form-control{
     display: block;
 }
 .contact-item-content .contact-title{
-    font-family: 'Dosis';
+    font-family: 300;
     font-size: 12px;
-    color: #777;
+    color: #4e4e4e;
     letter-spacing: .3em;
     text-transform: uppercase;
     margin-bottom: 16px;
 }
 .contact-item-content .contact-data{
     font-size: 15px;
-    font-family: 'Dosis Regular';
+    font-family: 300;
     color: #444;
+}
+.contact-form{
+    margin: 0 -5px;
+    overflow: hidden;
+}
+.contact-form .form-col{
+    float: left;
+    width: 50%;
+    padding: 0 5px;
+}
+.contact-form .form-control + .form-control{
+    margin-top: 10px;
+}
+.contact-form .btn-black{
+    margin-top: 23px;
+}
+.contact-form .form-info{
+    line-height: 60px;
+    color: #aaa;
 }
 /* ------ Contacts end -----*/
 
@@ -607,7 +720,8 @@ textarea.form-control{
     padding: 142px 0 62px 0;
 }
 .footer-nav li {
-    margin: 26px 15px;
+    margin: 26px 10px;
+    color: #000;
 }
 .copyright .copy{
     margin-top: 110px;
@@ -620,10 +734,46 @@ textarea.form-control{
     margin-bottom: 17px;
 }
 .copyright .made-with-love{
-    font-family: 'Open-sans';
     font-size: 11px;
     color: #999;
 }
 /* ------ Footer end -----*/
+
+/* ------ Map start -----*/
+#map{
+    height: 410px;
+}
+.map-container{
+    position: relative;
+}
+.on-map-block{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    top: 0;
+    left: 0;
+}
+.map-container:hover .on-map-block{
+    display: none;
+}
+.on-map-block::before{
+    content: '';
+    display: inline-block;
+    height: 100%; 
+    vertical-align: middle;
+    margin-left: -4px;
+}
+.on-map-block-content{
+    display:inline-block;
+    vertical-align: middle;
+}
+.on-map-block-content span{
+    display: block;
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ------ Map end -----*/
 
 /* ===== Custom style end =====*/
