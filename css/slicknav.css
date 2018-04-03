@@ -15,7 +15,7 @@
 }
 
 .slicknav_btn .slicknav_icon-bar+.slicknav_icon-bar {
-  margin-top: 0.188em;
+  margin-top: 5px;
 }
 
 .slicknav_menu {
@@ -30,8 +30,7 @@
 
 .slicknav_menu .slicknav_icon {
   float: left;
-  width: 1.125em;
-  height: 0.875em;
+  width: 30px;
   margin: 0.188em 0 0 0.438em;
 }
 
@@ -50,14 +49,35 @@
 
 .slicknav_menu .slicknav_icon-bar {
   display: block;
-  width: 1.125em;
-  height: 0.125em;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 1px;
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 2px;
+}
+
+.sliknav_btn: hover .slicknav_icon-bar{
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 1.2s ease;
+}
+
+.slicknav_btn.slicknav_open .slicknav_icon-bar:nth-child(2) {
+  width: 0;
+} 
+
+.slicknav_btn.slicknav_open .slicknav_icon-bar:first-child {
+  transform:rotate(45deg);
+  transform-origin: left;
+}
+
+.slicknav_btn.slicknav_open .slicknav_icon-bar:last-child{
+  transform:rotate(-45deg);
+  transform-origin: left;
+}
+
+.slicknav_open .slicknav_icon{
+  width: 20px;
 }
 
 .slicknav_menu:before {
@@ -141,16 +161,21 @@
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  background-color: #222;
 }
 
 .slicknav_nav {
   color: #fff;
   margin: 0;
   padding: 0;
-  font-size: 0.875em;
   list-style: none;
   overflow: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  text-align: center;
+  padding: 10px 0;
 }
 
 .slicknav_nav ul {
@@ -174,10 +199,10 @@
 }
 
 .slicknav_nav a {
-  padding: 5px 10px;
-  margin: 2px 5px;
+  padding: 10px 15px;
   text-decoration: none;
   color: #fff;
+  font-size: 16px;
 }
 
 .slicknav_nav a:hover {

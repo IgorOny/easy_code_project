@@ -9,7 +9,7 @@ body{
     margin:0;
     background-color: #fff;
     color: #777;
-    font: 300 15px/1 'Open-sans', sans-serif;
+    font: 300 15px/1 'Open Sans', sans-serif;
 }
 h1, h2, h3, h4, h5, h6{
     margin: 0;
@@ -62,6 +62,16 @@ blockquote{
     padding: 135px 0;
     /* overflow: hidden; */
 }
+@media(max-width:767px){
+    .default-section{
+        padding: 80px 0;
+    }
+}
+@media(max-width:576px){
+    .default-section{
+        padding: 55px 0;
+    }
+}
 .default-section:nth-child(2){
     padding-bottom: 0;
 }
@@ -70,6 +80,9 @@ blockquote{
 }
 .small-section{
     padding: 70px 0;
+}
+@media(max-width:576px){
+    padding: 25px 0;
 }
 .container{
     max-width: 1200px;
@@ -93,11 +106,21 @@ blockquote{
     margin-bottom: 75px;
     font-weight: 400;
 }
+@media(max-width:767px){
+    .title.section-title{
+        margin-bottom: 25px;
+    }
+}
 .title.section-title-light{
     font-size: 18px;
     letter-spacing: .3em;
     margin-bottom: 20px;
     font-weight: 300;
+}
+@media(max-width:576px){
+    .title.section-title-light{
+        line-height: 1.7em;
+    }
 }
 .default-text{
     font-size: 15px;
@@ -118,6 +141,11 @@ blockquote span,
 @media (max-width: 991px) {
     blockquote{
         margin-bottom: 30px;
+    }
+}
+@media(max-width:767px){
+    blockquote{
+        margin-bottom: 0px;
     }
 }
 .btn{
@@ -156,7 +184,7 @@ btn[disabled] {
     border: 1px solid #e5e5e5;
     border-radius: 2px;
     height: 36px;
-    font-family: 'open-sans';
+    font-family: 'Open Sans';
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: .2em;
@@ -184,7 +212,7 @@ textarea.form-control{
     font-size: 11px;
     font-weight: 400;
     color: #aaa;
-    font-family: 'OpenSans';
+    font-family: 'Open Sans';
 }
 .form-info .fa{
     font-size: 12px;
@@ -265,7 +293,6 @@ textarea.form-control{
 /*------ Header start -----*/
 .header {
 	padding: 25px 0;
-	overflow: hidden;
 	width: 100%;
     position: absolute;
     z-index: 99;
@@ -281,6 +308,7 @@ textarea.form-control{
     font-weight: 300;
     letter-spacing: .3em;
     color: rgba(255, 255, 255, .75);
+    z-index: 100;
 }
 .header .header-nav li {
 	float: left;
@@ -299,6 +327,19 @@ textarea.form-control{
     }
     .header-nav{
         display: none;
+    }
+    .logo{
+        line-height: 4em;
+    }
+}
+@media(max-width:767px){
+    .header{
+        padding: 10px 0;
+    }
+}
+@media(max-width:576px){
+    .header{
+        padding: 10px 0;
     }
 }
 /*----- Header end -----*/
@@ -356,6 +397,12 @@ textarea.form-control{
         padding-top: 50px;
     }
 }
+@media (max-width:767px){
+    .inner{
+        height: auto;
+        padding: 150px 0;
+    }
+}
 /* ----- Inner end -----*/
 /* ------ About studio start -----*/
 .team-wraper{
@@ -392,6 +439,23 @@ textarea.form-control{
 }
 .team-item .team-item-img{
     position: relative;
+}
+@media(max-width:767px){
+    .team-item .team-item-img{
+        text-align: center;
+    }
+    .team-item img{
+        margin-top: 40px;
+    }
+    .team-item-name{
+        margin-top: 15px;
+    }
+   .about-studio .col{
+       margin-top: 25px;
+   }
+   .team-wraper{
+    padding: 25px 0 50px 0;
+   }
 }
 .team-item .team-item-skills{
     opacity: 0;
@@ -463,6 +527,62 @@ textarea.form-control{
 .border-bottom{
     border-bottom: 1px solid #ececec;
 }
+@media(max-width:991px){
+    .team-item .team-item-skills{
+    padding: 15px;
+    }
+    .team-item-skills p{
+        margin: 15px 0 20px 0;
+    }
+    .team-item-skills span{
+        font-size: 15px;
+    }
+    .progress-wrap{
+        height: 8px;
+    }
+}
+@media(max-width:767px){
+    .team-item .team-item-skills{
+        padding: 70px;
+        }
+        .team-item-skills p{
+            margin: 25px 0 35px 0;
+        }
+        .team-item-skills span{
+            font-size: 15px;
+        }
+        .progress-wrap{
+            height: 12px;
+        }
+}
+@media(max-width:576px){
+    .team-item .team-item-skills{
+        padding: 70px 40px 40px 40px;
+        }
+        .team-item-skills p{
+            margin: 20px 0 30px 0;
+        }
+        .team-item-skills span{
+            font-size: 15px;
+        }
+        .progress-wrap{
+            height: 10px;
+        }
+}
+@media(max-width: 479px){
+    .team-item .team-item-skills{
+        padding: 30px;
+        }
+        .team-item-skills p{
+            margin: 10px 0 15px 0;
+        }
+        .team-item-skills span{
+            font-size: 12px;
+        }
+        .progress-wrap{
+            height: 8px;
+        }
+}
 /* ------ About studio end -----*/
 
 /* ----- Services start-----*/
@@ -478,6 +598,15 @@ textarea.form-control{
     text-transform: uppercase;
     letter-spacing: .4em;
     color: #888;
+}
+@media(max-width:767px){
+    #tabs .tabs-nav li{
+        width: 50%;
+    }
+    .services p{
+        margin-top: 25px;
+        text-align: justify;
+    }
 }
 #tabs .tabs-nav span{
     display: block;
@@ -523,6 +652,9 @@ textarea.form-control{
 .tabs-wrapper{
     overflow: hidden;
 }
+.portfolio-item img{
+    width: 100%;
+}
 .portfolio .default-text p {
     color: #777;
     line-height: 26px;
@@ -541,6 +673,15 @@ textarea.form-control{
 }
 #tabs-portfolio .tabs-portfolio-nav li + li{
     margin-left: 70px;
+}
+@media (max-width: 767px){
+    #tabs-portfolio .tabs-portfolio-nav li{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    #tabs-portfolio .tabs-portfolio-nav li + li{
+        margin-left:0;
+    }
 }
 #tabs-portfolio .tabs-portfolio-nav .ui-state-active{
     color: #111;
@@ -561,6 +702,12 @@ textarea.form-control{
 @media(max-width: 991px){
     .portfolio-item{
         width: 50%;
+    }
+}
+@media(max-width: 767px){
+    .portfolio-item{
+        width: 100%;
+        text-align: center;
     }
 }
 /* ----- /Portfolio end -----*/
@@ -596,6 +743,11 @@ textarea.form-control{
 .reviews-carousel{
     padding: 135px 0;
     overflow: hidden;
+}
+@media(max-width:767px){
+    .reviews-carousel{
+        padding: 70px 0;
+    }
 }
 .slick-dots{
     position: absolute;
@@ -676,6 +828,21 @@ textarea.form-control{
     line-height: 30px;
     padding: 20px 0;
 }
+@media(max-width: 767px){
+    .slide-content p{
+        max-width: 500px;
+    }
+}
+@media(max-width: 576px){
+    .slide-content p{
+        max-width: 400px;
+    }
+}
+@media(max-width: 479px){
+    .slide-content p{
+        max-width: 300px;
+    }
+}
 .slide-content .review-author{
     font-weight: 300;
     font-size: 11px;
@@ -693,6 +860,11 @@ textarea.form-control{
     font-size: 11px;
     letter-spacing: .4em;
     color: #999;
+}
+@media(max-width:576px){
+    .latest-news .title a{
+        margin: 10px 0;
+    }
 }
 .col .latest-news-name{
     font-size: 15px;
@@ -744,11 +916,22 @@ textarea.form-control{
 .subscribe .form-info {
     margin-top: 17px;
 }
+@media(max-width:576px){
+    .subscribe form button{
+        width: 100%;
+        margin-top: 10px;
+    }
+}
 /* ------ Subscribe end -----*/
 
 /* ------ Contacts start -----*/
 .contact-item-wrapper{
     margin-bottom: 80px;
+}
+@media(max-width:767px){
+    .contact-item-wrapper{
+        margin-bottom: 30px;
+    }
 }
 .contact-item .contact-item-content{
     display: inline-block;
@@ -759,7 +942,7 @@ textarea.form-control{
     display: block;
 }
 .contact-item-content .contact-title{
-    font-family: 300;
+    font-family: 'Dosis';
     font-size: 12px;
     color: #4e4e4e;
     letter-spacing: .3em;
@@ -768,41 +951,67 @@ textarea.form-control{
 }
 .contact-item-content .contact-data{
     font-size: 15px;
-    font-family: 300;
+    font-family: 'Open Sans';
     color: #444;
+}
+@media(max-width:767px){
+    .contact-item .contact-item-content{
+       display: block;
+       text-align: center;
+       margin: 20px 0 30px 0;
+    }
+    .contact-item{
+        text-align: center;
+    }
 }
 .contact-form{
     margin: 0 -5px;
     overflow: hidden;
+}
+.form-row{
+    margin: 0 -5px;
+    overflow: hidden;
+}
+.form-submit{
+   margin-top: 20px;
 }
 .contact-form .form-col{
     float: left;
     width: 50%;
     padding: 0 5px;
 }
+@media(max-width:767px){
+    .contact-form .form-col{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+@media(max-width:576px){
+    .contact-form button{
+        width: 100%;
+    }
+}
 .contact-form .form-control + .form-control{
     margin-top: 10px;
 }
-.contact-form .btn-black{
-    margin-top: 23px;
-}
 .contact-form .form-info{
-    line-height: 60px;
+    line-height: 30px;
     color: #aaa;
 }
 /* ------ Contacts end -----*/
 
 /* ------ Footer start -----*/
 .footer{
-    background-color: #f8f8f8;
     padding: 142px 0 62px 0;
 }
 .footer-nav li {
     margin: 26px 10px;
     color: #000;
 }
-.copyright .copy{
+.copyright{
     margin-top: 110px;
+}
+.copyright .copy{
     display: block;
     font-family: 'Dosis';
     font-size: 12px;
@@ -810,6 +1019,14 @@ textarea.form-control{
     letter-spacing: .5em;
     color: #111;
     margin-bottom: 17px;
+}
+@media(max-width:576px){
+    .footer{
+        padding: 70px 0 30px 0;
+    }
+    .copyright{
+        margin-top: 50px;
+    }
 }
 .copyright .made-with-love{
     font-size: 11px;
